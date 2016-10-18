@@ -31,3 +31,25 @@ Submission instructions
 Upon completion of your work, submit a link to the repository via this form.
 
 ******************************************************************************************************************************************/
+
+var Game = function (p1name, p2name) {
+  this.board = [
+    [' ',' ',' '],
+    [' ',' ',' '],
+    [' ',' ',' ']
+  ];
+  this.player1 = {
+    name: p1name
+  }
+  this.player2 = {
+    name: p2name
+  }
+}
+
+Game.prototype.makeMove = function() {
+  console.log('inside');
+  console.log(this.player1.name, this.player2.name);
+}
+
+var test = new Game('derek', 'bob');
+test.makeMove();
