@@ -4,6 +4,7 @@
   "description": "tic tac toe game",
   "main": "tictactoe.js",
   "scripts": {
+    "start": "node tictactoe.js",
     "test": "mocha spec.js"
   },
   "repository": {
@@ -17,6 +18,10 @@
   },
   "homepage": "https://github.com/derektliu/TicTacToe#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
     "mocha": "^3.1.2"
+  },
+  "dependencies": {
+    "prompt": "^1.0.0"
   }
 }
