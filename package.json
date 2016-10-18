@@ -1,0 +1,19 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "tic tac toe game",
+  "main": "tictactoe.js",
+  "scripts": {
+    "test": "mocha spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derektliu/TicTacToe.git"
+  },
+  "author": "Derek",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derektliu/TicTacToe/issues"
+  },
+  "homepage": "https://github.com/derektliu/TicTacToe#readme"
+}
