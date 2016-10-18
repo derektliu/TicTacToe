@@ -31,5 +31,3 @@ Submission instructions
 Upon completion of your work, submit a link to the repository via this form.
 
 ******************************************************************************************************************************************/
-
-Board.prototype.class()
