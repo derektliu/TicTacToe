@@ -61,10 +61,10 @@ Game.prototype.checkWin = function() {
   for (var row = 0; row < this.board.length; row++) {
     if (this.board[row][0] === this.board[row][1] && this.board[row][0] === this.board[row][2]) {
       if (this.board[row][0] === 'x') {
-        console.log('player1 wins');
+        console.log('player 1 wins');
         return true;
       } else if (this.board[row][0] === 'o') {
-        console.log('player2 wins');
+        console.log('player 2 wins');
         return true;
       }
     }
@@ -74,12 +74,12 @@ Game.prototype.checkWin = function() {
   for (var col = 0; col < this.board[0].length; col++) {
     if (this.board[0][col] === this.board[1][col] && this.board[0][col] === this.board[2][col]) {
       if (this.board[0][col] === 'x') {
-        console.log('player1 wins');
+        console.log('player 1 wins');
         return true;
 
       } else if (this.board[0][col] === 'o') {
 
-        console.log('player2 wins');
+        console.log('player 2 wins');
         return true;
 
       }
@@ -89,11 +89,11 @@ Game.prototype.checkWin = function() {
   // check top-left to bottom-right diagonal
   if (this.board[0][0] === this.board[1][1] && this.board[0][0] === this.board[2][2]) {
     if (this.board[0][0] === 'x') {
-      console.log('player1 wins');
+      console.log('player 1 wins');
       return true;
 
     } else if (this.board[0][0] === 'o') {
-      console.log('player2 wins');
+      console.log('player 2 wins');
       return true;
 
     }
@@ -101,11 +101,11 @@ Game.prototype.checkWin = function() {
 
   if (this.board[0][2] === this.board[1][1] && this.board[0][2] === this.board[2][0]) {
     if (this.board[0][2] === 'x') {
-      console.log('player1 wins');
+      console.log('player 1 wins');
       return true;
 
     } else if (this.board[0][2] === 'o') {
-      console.log('player2 wins');
+      console.log('player 2 wins');
       return true;
 
     }
@@ -144,6 +144,8 @@ Game.prototype.startGame = function() {
   this.displayBoard();
 
   var playerMove = function(player) {
+    console.log(player + '\'s turn!')
+    console.log('what is your move?');
     prompt.get(['x', 'y'], function (err, result) {
       var x = result.x;
       var y = result.y;
@@ -154,17 +156,15 @@ Game.prototype.startGame = function() {
       } else {
         console.log('please choose another square');
       }
-      console.log('checkwin', context.checkWin());
       if (context.checkWin()){
         return;
       } else {
         if (player === 'p1') { playerMove('p2'); }
-        else { playerMove('p2'); }
+        else { playerMove('p1'); }
       }
 
     });
   }
-  console.log('what is your move?');
   playerMove('p1');
 
 };
